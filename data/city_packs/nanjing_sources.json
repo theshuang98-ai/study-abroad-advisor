@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "city_pack_id": "nanjing_pack_v1",
+  "sources": [
+    {
+      "source_id": "nju_hwxy_long_term_chinese",
+      "university": "Nanjing University",
+      "title": "南京大学海外教育学院长期汉语进修",
+      "url": "https://hwxy.nju.edu.cn/lxnd/zsxx/hyxx/zqhyjx/20220621/i223965.html",
+      "source_type": "official_webpage",
+      "accessed_at": "2026-11-23",
+      "access_status": "accessible",
+      "snapshot_path": ".local/sources/nanjing/nju_hwxy_long_term_chinese.html"
+    },
+    {
+      "source_id": "seu_cis_fee_standard",
+      "university": "Southeast University",
+      "title": "东南大学海外教育学院收费标准",
+      "url": "https://cis.seu.edu.cn/54361/list.htm",
+      "source_type": "official_webpage",
+      "accessed_at": "2026-11-23",
+      "access_status": "accessible",
+      "snapshot_path": ".local/sources/nanjing/seu_cis_fee_standard.html"
+    },
+    {
+      "source_id": "seu_cis_language_program_admission",
+      "university": "Southeast University",
+      "title": "Language Program and Undergraduate's Programs",
+      "url": "https://cis.seu.edu.cn/hwenglish/lpup/list.htm",
+      "source_type": "official_webpage",
+      "accessed_at": "2026-11-23",
+      "access_status": "accessible",
+      "snapshot_path": ".local/sources/nanjing/seu_cis_language_program_admission.html"
+    },
+    {
+      "source_id": "njnu_2027_international_guide",
+      "university": "Nanjing Normal University",
+      "title": "南京师范大学2027年国际学生申请指南",
+      "url": "https://gjc.njnu.edu.cn/info/1035/7544.htm",
+      "source_type": "official_webpage",
+      "accessed_at": "2026-11-23",
+      "access_status": "accessible",
+      "snapshot_path": ".local/sources/nanjing/njnu_2027_international_guide.html"
+    }
+  ]
+}

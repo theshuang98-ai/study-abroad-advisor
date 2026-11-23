@@ -1,0 +1,857 @@
+{
+  "schema_version": "1.0",
+  "generation_mode": "offline_fake_model_with_real_sources",
+  "review": {
+    "method": "offline field and evidence checks against official sources",
+    "reviewed_at": "2026-11-20T17:01:03.865661+00:00",
+    "note": "This is not a real-model quality evaluation.",
+    "corrections": "Numeric JSON tuition amounts; Chinese Language language requirements remain unknown until Overseas Education College requirements are verified."
+  },
+  "programs": [
+    {
+      "program_id": "xmu_2027_cn_bachelor_catalog#r1",
+      "university": "Xiamen University",
+      "program_name_original": "Chinese Language (Education)",
+      "degree_level": "bachelor",
+      "is_degree_program": true,
+      "academic_field": "Chinese Language and Literature",
+      "instruction_languages": [
+        "zh"
+      ],
+      "duration_text": "4 years",
+      "tuition_amount": 26000,
+      "tuition_currency": "CNY",
+      "tuition_period": "year",
+      "tuition_text": "Science, Engineering, Medicine, Economics, Management, Law, Arts, Physical Education and Chinese Language (Overseas Education College): RMB 26,000/year.",
+      "application_deadline": "2027-05-31",
+      "deadline_text": "May 31, 2027 | Self-funded",
+      "language_requirements": null,
+      "academic_requirements": [
+        "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record."
+      ],
+      "admission_cycle": "2027_entry",
+      "verification_status": "partial",
+      "evidence": [
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "degree_level",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Programs: Undergraduate",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "instruction_languages",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Medium of Instructions: Chinese",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "duration_text",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Duration: 4",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "tuition_amount",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Science, Engineering, Medicine, Economics, Management, Law, Arts, Physical Education and Chinese Language (Overseas Education College): RMB 26,000/year.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "application_deadline",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "May 31, 2027 | Self-funded",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "language_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "academic_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        }
+      ],
+      "collected_at": "2026-11-20T17:01:03.865661Z"
+    },
+    {
+      "program_id": "xmu_2027_cn_bachelor_catalog#r2",
+      "university": "Xiamen University",
+      "program_name_original": "Chinese Language (Trade)",
+      "degree_level": "bachelor",
+      "is_degree_program": true,
+      "academic_field": "Chinese Language and Literature",
+      "instruction_languages": [
+        "zh"
+      ],
+      "duration_text": "4 years",
+      "tuition_amount": 26000,
+      "tuition_currency": "CNY",
+      "tuition_period": "year",
+      "tuition_text": "Science, Engineering, Medicine, Economics, Management, Law, Arts, Physical Education and Chinese Language (Overseas Education College): RMB 26,000/year.",
+      "application_deadline": "2027-05-31",
+      "deadline_text": "May 31, 2027 | Self-funded",
+      "language_requirements": null,
+      "academic_requirements": [
+        "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record."
+      ],
+      "admission_cycle": "2027_entry",
+      "verification_status": "partial",
+      "evidence": [
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "degree_level",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Programs: Undergraduate",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "instruction_languages",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Medium of Instructions: Chinese",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "duration_text",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Duration: 4",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "tuition_amount",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Science, Engineering, Medicine, Economics, Management, Law, Arts, Physical Education and Chinese Language (Overseas Education College): RMB 26,000/year.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "application_deadline",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "May 31, 2027 | Self-funded",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "language_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "academic_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        }
+      ],
+      "collected_at": "2026-11-20T17:01:03.865661Z"
+    },
+    {
+      "program_id": "xmu_2027_cn_bachelor_catalog#r3",
+      "university": "Xiamen University",
+      "program_name_original": "Chinese Language (Culture and Media )",
+      "degree_level": "bachelor",
+      "is_degree_program": true,
+      "academic_field": "Chinese Language and Literature",
+      "instruction_languages": [
+        "zh"
+      ],
+      "duration_text": "4 years",
+      "tuition_amount": 26000,
+      "tuition_currency": "CNY",
+      "tuition_period": "year",
+      "tuition_text": "Science, Engineering, Medicine, Economics, Management, Law, Arts, Physical Education and Chinese Language (Overseas Education College): RMB 26,000/year.",
+      "application_deadline": "2027-05-31",
+      "deadline_text": "May 31, 2027 | Self-funded",
+      "language_requirements": null,
+      "academic_requirements": [
+        "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record."
+      ],
+      "admission_cycle": "2027_entry",
+      "verification_status": "partial",
+      "evidence": [
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "degree_level",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Programs: Undergraduate",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "instruction_languages",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Medium of Instructions: Chinese",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "duration_text",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Duration: 4",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "tuition_amount",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Science, Engineering, Medicine, Economics, Management, Law, Arts, Physical Education and Chinese Language (Overseas Education College): RMB 26,000/year.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "application_deadline",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "May 31, 2027 | Self-funded",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "language_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "academic_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        }
+      ],
+      "collected_at": "2026-11-20T17:01:03.865661Z"
+    },
+    {
+      "program_id": "xmu_2027_cn_bachelor_catalog#r4",
+      "university": "Xiamen University",
+      "program_name_original": "Communication",
+      "degree_level": "bachelor",
+      "is_degree_program": true,
+      "academic_field": "Journalism and Communication",
+      "instruction_languages": [
+        "zh"
+      ],
+      "duration_text": "4 years",
+      "tuition_amount": 24000,
+      "tuition_currency": "CNY",
+      "tuition_period": "year",
+      "tuition_text": "Humanities: RMB 24,000/year.",
+      "application_deadline": "2027-05-31",
+      "deadline_text": "May 31, 2027 | Self-funded",
+      "language_requirements": [
+        "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)"
+      ],
+      "academic_requirements": [
+        "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record."
+      ],
+      "admission_cycle": "2027_entry",
+      "verification_status": "verified",
+      "evidence": [
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "degree_level",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Programs: Undergraduate",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "instruction_languages",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Medium of Instructions: Chinese",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "duration_text",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Duration: 4",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "tuition_amount",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Humanities: RMB 24,000/year.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "application_deadline",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "May 31, 2027 | Self-funded",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "language_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "academic_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        }
+      ],
+      "collected_at": "2026-11-20T17:01:03.865661Z"
+    },
+    {
+      "program_id": "xmu_2027_cn_bachelor_catalog#r5",
+      "university": "Xiamen University",
+      "program_name_original": "Advertising",
+      "degree_level": "bachelor",
+      "is_degree_program": true,
+      "academic_field": "Journalism and Communication",
+      "instruction_languages": [
+        "zh"
+      ],
+      "duration_text": "4 years",
+      "tuition_amount": 24000,
+      "tuition_currency": "CNY",
+      "tuition_period": "year",
+      "tuition_text": "Humanities: RMB 24,000/year.",
+      "application_deadline": "2027-05-31",
+      "deadline_text": "May 31, 2027 | Self-funded",
+      "language_requirements": [
+        "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)"
+      ],
+      "academic_requirements": [
+        "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record."
+      ],
+      "admission_cycle": "2027_entry",
+      "verification_status": "verified",
+      "evidence": [
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "degree_level",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Programs: Undergraduate",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "instruction_languages",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Medium of Instructions: Chinese",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "duration_text",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Duration: 4",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "tuition_amount",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Humanities: RMB 24,000/year.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "application_deadline",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "May 31, 2027 | Self-funded",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "language_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "academic_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        }
+      ],
+      "collected_at": "2026-11-20T17:01:03.865661Z"
+    },
+    {
+      "program_id": "xmu_2027_cn_bachelor_catalog#r6",
+      "university": "Xiamen University",
+      "program_name_original": "International Journalism and Communication",
+      "degree_level": "bachelor",
+      "is_degree_program": true,
+      "academic_field": "Journalism and Communication",
+      "instruction_languages": [
+        "zh"
+      ],
+      "duration_text": "4 years",
+      "tuition_amount": 24000,
+      "tuition_currency": "CNY",
+      "tuition_period": "year",
+      "tuition_text": "Humanities: RMB 24,000/year.",
+      "application_deadline": "2027-05-31",
+      "deadline_text": "May 31, 2027 | Self-funded",
+      "language_requirements": [
+        "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)"
+      ],
+      "academic_requirements": [
+        "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record."
+      ],
+      "admission_cycle": "2027_entry",
+      "verification_status": "verified",
+      "evidence": [
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "degree_level",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Programs: Undergraduate",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "instruction_languages",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Medium of Instructions: Chinese",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "duration_text",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Duration: 4",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "tuition_amount",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Humanities: RMB 24,000/year.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "application_deadline",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "May 31, 2027 | Self-funded",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "language_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "academic_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        }
+      ],
+      "collected_at": "2026-11-20T17:01:03.865661Z"
+    },
+    {
+      "program_id": "xmu_2027_cn_bachelor_catalog#r7",
+      "university": "Xiamen University",
+      "program_name_original": "Journalism",
+      "degree_level": "bachelor",
+      "is_degree_program": true,
+      "academic_field": "Journalism and Communication",
+      "instruction_languages": [
+        "zh"
+      ],
+      "duration_text": "4 years",
+      "tuition_amount": 24000,
+      "tuition_currency": "CNY",
+      "tuition_period": "year",
+      "tuition_text": "Humanities: RMB 24,000/year.",
+      "application_deadline": "2027-05-31",
+      "deadline_text": "May 31, 2027 | Self-funded",
+      "language_requirements": [
+        "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)"
+      ],
+      "academic_requirements": [
+        "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record."
+      ],
+      "admission_cycle": "2027_entry",
+      "verification_status": "verified",
+      "evidence": [
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "degree_level",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Programs: Undergraduate",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "instruction_languages",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Medium of Instructions: Chinese",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "duration_text",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Duration: 4",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "tuition_amount",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Humanities: RMB 24,000/year.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "application_deadline",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "May 31, 2027 | Self-funded",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "language_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "academic_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        }
+      ],
+      "collected_at": "2026-11-20T17:01:03.865661Z"
+    },
+    {
+      "program_id": "xmu_2027_cn_bachelor_catalog#r8",
+      "university": "Xiamen University",
+      "program_name_original": "Financial Management",
+      "degree_level": "bachelor",
+      "is_degree_program": true,
+      "academic_field": "Management",
+      "instruction_languages": [
+        "zh"
+      ],
+      "duration_text": "4 years",
+      "tuition_amount": 26000,
+      "tuition_currency": "CNY",
+      "tuition_period": "year",
+      "tuition_text": "Science, Engineering, Medicine, Economics, Management, Law, Arts, Physical Education and Chinese Language (Overseas Education College): RMB 26,000/year.",
+      "application_deadline": "2027-05-31",
+      "deadline_text": "May 31, 2027 | Self-funded",
+      "language_requirements": [
+        "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)"
+      ],
+      "academic_requirements": [
+        "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record."
+      ],
+      "admission_cycle": "2027_entry",
+      "verification_status": "verified",
+      "evidence": [
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "degree_level",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Programs: Undergraduate",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "instruction_languages",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Medium of Instructions: Chinese",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "duration_text",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Duration: 4",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "tuition_amount",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Science, Engineering, Medicine, Economics, Management, Law, Arts, Physical Education and Chinese Language (Overseas Education College): RMB 26,000/year.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "application_deadline",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "May 31, 2027 | Self-funded",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "language_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "academic_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        }
+      ],
+      "collected_at": "2026-11-20T17:01:03.865661Z"
+    },
+    {
+      "program_id": "xmu_2027_cn_bachelor_catalog#r9",
+      "university": "Xiamen University",
+      "program_name_original": "Management Science",
+      "degree_level": "bachelor",
+      "is_degree_program": true,
+      "academic_field": "Management",
+      "instruction_languages": [
+        "zh"
+      ],
+      "duration_text": "4 years",
+      "tuition_amount": 26000,
+      "tuition_currency": "CNY",
+      "tuition_period": "year",
+      "tuition_text": "Science, Engineering, Medicine, Economics, Management, Law, Arts, Physical Education and Chinese Language (Overseas Education College): RMB 26,000/year.",
+      "application_deadline": "2027-05-31",
+      "deadline_text": "May 31, 2027 | Self-funded",
+      "language_requirements": [
+        "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)"
+      ],
+      "academic_requirements": [
+        "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record."
+      ],
+      "admission_cycle": "2027_entry",
+      "verification_status": "verified",
+      "evidence": [
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "degree_level",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Programs: Undergraduate",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "instruction_languages",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Medium of Instructions: Chinese",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "duration_text",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Duration: 4",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "tuition_amount",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Science, Engineering, Medicine, Economics, Management, Law, Arts, Physical Education and Chinese Language (Overseas Education College): RMB 26,000/year.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "application_deadline",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "May 31, 2027 | Self-funded",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "language_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "academic_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        }
+      ],
+      "collected_at": "2026-11-20T17:01:03.865661Z"
+    },
+    {
+      "program_id": "xmu_2027_cn_bachelor_catalog#r10",
+      "university": "Xiamen University",
+      "program_name_original": "Accounting",
+      "degree_level": "bachelor",
+      "is_degree_program": true,
+      "academic_field": "Management",
+      "instruction_languages": [
+        "zh"
+      ],
+      "duration_text": "4 years",
+      "tuition_amount": 26000,
+      "tuition_currency": "CNY",
+      "tuition_period": "year",
+      "tuition_text": "Science, Engineering, Medicine, Economics, Management, Law, Arts, Physical Education and Chinese Language (Overseas Education College): RMB 26,000/year.",
+      "application_deadline": "2027-05-31",
+      "deadline_text": "May 31, 2027 | Self-funded",
+      "language_requirements": [
+        "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)"
+      ],
+      "academic_requirements": [
+        "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record."
+      ],
+      "admission_cycle": "2027_entry",
+      "verification_status": "verified",
+      "evidence": [
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "degree_level",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Programs: Undergraduate",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "instruction_languages",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Medium of Instructions: Chinese",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_cn_bachelor_catalog",
+          "field_name": "duration_text",
+          "source_url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+          "source_quote": "Duration: 4",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "tuition_amount",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Science, Engineering, Medicine, Economics, Management, Law, Arts, Physical Education and Chinese Language (Overseas Education College): RMB 26,000/year.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "application_deadline",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "May 31, 2027 | Self-funded",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "language_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Programs in Humanities, Economics, Management, Law, Arts, Traditional Chinese Medicine: HSK 5 with a score of 210 or better (Applicants for the major in Chinese Language, please refer to the website of Overseas Education College directly for the HSK requirements.)",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        },
+        {
+          "source_id": "xmu_2027_undergraduate_guide",
+          "field_name": "academic_requirements",
+          "source_url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+          "source_quote": "Applicants should be a graduating senior high school student or hold a senior high school diploma with a satisfactory academic record.",
+          "admission_cycle": "2027_entry",
+          "collected_at": "2026-11-20T17:01:03.865661Z"
+        }
+      ],
+      "collected_at": "2026-11-20T17:01:03.865661Z"
+    }
+  ],
+  "failures": []
+}

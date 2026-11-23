@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "case_id": "hard_filter_xmu_hsk_score_boundary",
+      "category": "hard_filter",
+      "question": "学生申请厦门大学2027中文授课计算机科学与技术，只有HSK 4级205分，没有其他中文授课证明，是否达到语言要求？",
+      "student_profile": {
+        "target_program_id": "xmu_computer_science_technology",
+        "hsk_level": 4,
+        "hsk_score": 205,
+        "has_chinese_medium_certificate": false
+      },
+      "expected_answer": "未达到。该项目属于工程类中文授课项目，要求HSK 4级210分及以上；205分不足。",
+      "expected_program_ids": ["xmu_computer_science_technology"],
+      "expected_source_ids": ["xmu_2027_undergraduate_guide", "xmu_2027_cn_bachelor_catalog"],
+      "must_not_claim": ["HSK 4级不限分数", "205分已经达到要求"],
+      "notes": "验证规则同时使用项目类别和HSK分数边界。"
+    },
+    {
+      "case_id": "hard_filter_xmu_english_ielts_boundary",
+      "category": "hard_filter",
+      "question": "学生申请厦门大学2027英文授课MBBS，IELTS总分5.5，且不属于英语官方语言国家申请人，是否符合英语要求？",
+      "student_profile": {
+        "target_program_id": "xmu_mbbs",
+        "ielts_overall": 5.5,
+        "from_english_official_language_country": false,
+        "has_english_medium_certificate": false
+      },
+      "expected_answer": "不符合。英文授课项目要求IELTS Academic总分至少6.0，也可使用符合要求的TOEFL、英文授课证明或其他受认可证书；当前IELTS 5.5不足。",
+      "expected_program_ids": ["xmu_mbbs"],
+      "expected_source_ids": ["xmu_2027_undergraduate_guide"],
+      "must_not_claim": ["IELTS 5.5可以直接满足英语要求"],
+      "notes": "验证英语门槛和替代证明不会被静默忽略。"
+    },
+    {
+      "case_id": "retrieval_fdu_computer_science_facts",
+      "category": "retrieval",
+      "question": "复旦大学2027中文授课计算机科学与技术本科的学制和学费是多少？",
+      "student_profile": null,
+      "expected_answer": "学制4年，目录列示学费为26,000元人民币/年；最终学费以入学时公布为准。",
+      "expected_program_ids": ["fdu_computer_science_technology"],
+      "expected_source_ids": ["fdu_2027_cn_undergraduate_catalog"],
+      "must_not_claim": ["学费为23,000元/年", "学制为5年"],
+      "notes": "答案应保留目录学费的时效限制。"
+    },
+    {
+      "case_id": "retrieval_fdu_chinese_requirement",
+      "category": "retrieval",
+      "question": "申请复旦大学2027中文授课本科需要哪一等级的HSK成绩？",
+      "student_profile": null,
+      "expected_answer": "要求HSK 5级210分及以上，或HSK 6级180分及以上；马来西亚UEC持有者可豁免。",
+      "expected_program_ids": [],
+      "expected_source_ids": ["fdu_2027_cn_undergraduate_guide"],
+      "must_not_claim": ["HSK 4级210分即可", "所有申请人都不能豁免"],
+      "notes": "检查等级、分数与豁免条件是否完整。"
+    },
+    {
+      "case_id": "retrieval_zju_non_degree_fee_and_outcome",
+      "category": "retrieval",
+      "question": "浙江大学Chinese Language & Culture项目的学费和完成后的学习结果是什么？",
+      "student_profile": null,
+      "expected_answer": "学费为9,000元人民币/学期。完成语言课程并达到考核要求后，获得浙江大学结业证书；该项目页面明确标为non-degree。",
+      "expected_program_ids": ["zju_chinese_language_culture_non_degree"],
+      "expected_source_ids": ["zju_chinese_language_culture_non_degree"],
+      "must_not_claim": ["完成后获得学士学位", "学费为9,000元/年"],
+      "notes": "同时核对非学历属性、费用周期和证书类型。"
+    },
+    {
+      "case_id": "retrieval_xmu_computer_science_facts",
+      "category": "retrieval",
+      "question": "厦门大学2027中文授课计算机科学与技术本科的学制和学费类别是什么？",
+      "student_profile": null,
+      "expected_answer": "目录列示学制4年、中文授课。该项目属于工程类，指南列示学费为26,000元人民币/年；学费可按价格主管部门审批调整。",
+      "expected_program_ids": ["xmu_computer_science_technology"],
+      "expected_source_ids": ["xmu_2027_undergraduate_guide", "xmu_2027_cn_bachelor_catalog"],
+      "must_not_claim": ["学费为24,000元/年", "该项目为英文授课"],
+      "notes": "需要合并目录与总指南，不能混用文科学费。"
+    },
+    {
+      "case_id": "comparison_fdu_xmu_clinical_medicine",
+      "category": "comparison",
+      "question": "比较复旦大学2027中文授课临床医学与厦门大学2027英文授课MBBS的学制和学费。",
+      "student_profile": null,
+      "expected_answer": "复旦中文授课临床医学学制5年，目录学费42,000元人民币/年；厦大英文授课MBBS学制6年，指南学费38,000元人民币/年。两校均提示以正式入学或审批后的费用为准。",
+      "expected_program_ids": ["fdu_clinical_medicine", "xmu_mbbs"],
+      "expected_source_ids": ["fdu_2027_cn_undergraduate_catalog", "xmu_2027_undergraduate_guide"],
+      "must_not_claim": ["两个项目学制相同", "两个项目均为中文授课"],
+      "notes": "跨来源比较必须保留项目和授课语言差异。"
+    },
+    {
+      "case_id": "comparison_zju_degree_vs_non_degree",
+      "category": "comparison",
+      "question": "浙江大学2027本科项目与Chinese Language & Culture项目在学历结果上有什么区别？",
+      "student_profile": null,
+      "expected_answer": "本科项目学生满足学位要求后获得学士学位；Chinese Language & Culture页面标为non-degree，完成语言课程并达到考核要求后获得结业证书。",
+      "expected_program_ids": ["zju_undergraduate", "zju_chinese_language_culture_non_degree"],
+      "expected_source_ids": ["zju_2027_undergraduate_guide", "zju_chinese_language_culture_non_degree"],
+      "must_not_claim": ["两个项目都授予学士学位", "结业证书等同于学士学位"],
+      "notes": "这是产品区分学历项目与非学历项目的核心案例。"
+    },
+    {
+      "case_id": "missing_fdu_universal_free_accommodation",
+      "category": "missing",
+      "question": "复旦大学2027中文授课本科是否保证所有录取学生都获得免费校内住宿？",
+      "student_profile": null,
+      "expected_answer": "现有指南不能支持这一结论。指南只说明符合条件的上海政府奖学金A类获得者可免费校内住宿或获得住宿补贴，不能据此推断所有录取学生都免费住宿。",
+      "expected_program_ids": [],
+      "expected_source_ids": ["fdu_2027_cn_undergraduate_guide"],
+      "must_not_claim": ["所有录取学生都有免费校内住宿", "所有奖学金都包含免费住宿"],
+      "notes": "测试系统是否把特定奖学金权益错误泛化到全部学生。"
+    },
+    {
+      "case_id": "conflict_zju_general_and_major_deadlines",
+      "category": "conflict",
+      "question": "浙江大学2027所有本科专业的申请截止日期都统一为2027年2月28日吗？",
+      "student_profile": null,
+      "expected_answer": "不能这样概括。总指南写明申请从发布之日起至2027年2月28日，但部分专业截止日期为2027年5月31日，具体必须查看相应项目目录。",
+      "expected_program_ids": [],
+      "expected_source_ids": ["zju_2027_undergraduate_guide"],
+      "must_not_claim": ["所有专业都在2月28日截止", "2月28日与5月31日必须任选一个作为全校统一日期"],
+      "notes": "这是范围与例外冲突案例，系统应保留两种日期及其适用范围。"
+    }
+  ]
+}

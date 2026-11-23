@@ -1,0 +1,186 @@
+{
+  "city_pack_id": "nanjing_pack_v1",
+  "city": "Nanjing",
+  "country": "China",
+  "target_program_type": "one_year_chinese_program",
+  "admission_cycle": "2027_fall",
+  "version": "v1",
+  "created_at": "2026-11-23T10:00:00Z",
+  "updated_at": "2026-11-23T13:00:00Z",
+  "universities": [
+    {
+      "university": "Nanjing University",
+      "city": "Nanjing",
+      "tier_hint": "reach",
+      "pool_status": "active",
+      "review_flags": [],
+      "official_programs": [
+        {
+          "program_id": "nju_2027_one_year_chinese",
+          "university": "Nanjing University",
+          "city": "Nanjing",
+          "program_name": "Long-Term Chinese Language Program",
+          "program_type": "one_year_chinese_program",
+          "admission_cycle": "2027_fall",
+          "instruction_language": "Chinese",
+          "duration_text": "1 year",
+          "tuition_amount": 21000,
+          "tuition_currency": "CNY",
+          "tuition_period": "year",
+          "application_deadline": "2027-06-25",
+          "requirements": {
+            "education_level_required": "high_school",
+            "chinese_level_required": "placement_test",
+            "hsk_level_required": null,
+            "hsk_score_required": null,
+            "ielts_score_required": null,
+            "toefl_score_required": null,
+            "other_requirements": [
+              "Age 18 or above",
+              "Valid foreign passport"
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "nju_hwxy_long_term_chinese",
+              "source_url": "https://hwxy.nju.edu.cn/lxnd/zsxx/hyxx/zqhyjx/20220621/i223965.html",
+              "source_title": "南京大学海外教育学院长期汉语进修",
+              "source_quote": "学费：申报一学期者缴纳10500元，申报一学年者缴纳21000元。",
+              "admission_cycle": "2027_fall",
+              "accessed_at": "2026-11-23"
+            }
+          ],
+          "verification_status": "partial",
+          "review_flags": [],
+          "last_reviewed_at": "2026-11-23T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "university": "Southeast University",
+      "city": "Nanjing",
+      "tier_hint": "reach",
+      "pool_status": "active",
+      "review_flags": [],
+      "official_programs": [
+        {
+          "program_id": "seu_2027_chinese_student_program",
+          "university": "Southeast University",
+          "city": "Nanjing",
+          "program_name": "Chinese Language and Culture Program",
+          "program_type": "one_year_chinese_program",
+          "admission_cycle": "2027_fall",
+          "instruction_language": "Chinese",
+          "duration_text": "1 year",
+          "tuition_amount": 16000,
+          "tuition_currency": "CNY",
+          "tuition_period": "year",
+          "application_deadline": "2027-07-30",
+          "requirements": {
+            "education_level_required": null,
+            "chinese_level_required": null,
+            "hsk_level_required": null,
+            "hsk_score_required": null,
+            "ielts_score_required": null,
+            "toefl_score_required": null,
+            "other_requirements": [
+              "Non-degree Chinese language student",
+              "Further requirements need manual confirmation from admission pages"
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "seu_cis_fee_standard",
+              "source_url": "https://cis.seu.edu.cn/54361/list.htm",
+              "source_title": "东南大学海外教育学院收费标准",
+              "source_quote": "汉语生 普通进修生 高级进修生 16000",
+              "admission_cycle": "2027_fall",
+              "accessed_at": "2026-11-23"
+            },
+            {
+              "source_id": "seu_cis_language_program_admission",
+              "source_url": "https://cis.seu.edu.cn/hwenglish/lpup/list.htm",
+              "source_title": "Language Program and Undergraduate's Programs",
+              "source_quote": "Application Period for Language Program: Spring Semester: Sep.1-Dec.30; Autumn Semester: Mar.1-Jul.30",
+              "admission_cycle": "2027_fall",
+              "accessed_at": "2026-11-23"
+            }
+          ],
+          "verification_status": "partial",
+          "review_flags": [
+            "needs_manual_review:admission_cycle",
+            "needs_manual_review:education_requirement",
+            "needs_manual_review:duration"
+          ],
+          "last_reviewed_at": "2026-11-23T12:20:00Z"
+        }
+      ]
+    },
+    {
+      "university": "Hohai University",
+      "city": "Nanjing",
+      "tier_hint": "match",
+      "pool_status": "pending",
+      "review_flags": [
+        "needs_manual_review:current_cycle_program_page",
+        "needs_manual_review:program_requirements",
+        "needs_manual_review:tuition"
+      ],
+      "official_programs": []
+    },
+    {
+      "university": "Nanjing Normal University",
+      "city": "Nanjing",
+      "tier_hint": "match",
+      "pool_status": "active",
+      "review_flags": [
+        "needs_manual_review:standalone_program_scope"
+      ],
+      "official_programs": [
+        {
+          "program_id": "njnu_2027_one_year_chinese_preparatory",
+          "university": "Nanjing Normal University",
+          "city": "Nanjing",
+          "program_name": "One-Year Chinese Preparatory Study",
+          "program_type": "one_year_chinese_program",
+          "admission_cycle": "2027_fall",
+          "instruction_language": "Chinese",
+          "duration_text": "1 year",
+          "tuition_amount": 16600,
+          "tuition_currency": "CNY",
+          "tuition_period": "year",
+          "application_deadline": null,
+          "requirements": {
+            "education_level_required": null,
+            "chinese_level_required": "below_degree_requirement",
+            "hsk_level_required": null,
+            "hsk_score_required": null,
+            "ielts_score_required": null,
+            "toefl_score_required": null,
+            "other_requirements": [
+              "For applicants below the required Chinese level",
+              "One year Chinese study may precede degree study"
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "njnu_2027_international_guide",
+              "source_url": "https://gjc.njnu.edu.cn/info/1035/7544.htm",
+              "source_title": "南京师范大学2027年国际学生申请指南",
+              "source_quote": "若申请者未达到汉语水平要求，可申请学习一年汉语后进入专业学习。",
+              "admission_cycle": "2027_fall",
+              "accessed_at": "2026-11-23"
+            }
+          ],
+          "verification_status": "partial",
+          "review_flags": [
+            "needs_manual_review:application_deadline",
+            "needs_manual_review:standalone_program_scope",
+            "needs_manual_review:tuition_table_quote"
+          ],
+          "last_reviewed_at": "2026-11-23T13:00:00Z"
+        }
+      ]
+    }
+  ]
+}

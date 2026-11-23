@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "city_pack_id": "nanjing_pack_v1",
+  "cases": [
+    {
+      "case_id": "nju_tuition",
+      "category": "fact",
+      "question": "南京大学长期汉语进修项目一学年学费是多少？",
+      "expected_source_ids": ["nju_hwxy_long_term_chinese"],
+      "expected_program_ids": ["nju_2027_one_year_chinese"],
+      "expected_answer": "一学年学费为21000元人民币，一学期为10500元。",
+      "notes": "官网长期汉语进修页面明确列出一学年学费。"
+    },
+    {
+      "case_id": "nju_fall_application_period",
+      "category": "policy",
+      "question": "南京大学长期汉语进修秋季学期的申请时间是什么？",
+      "expected_source_ids": ["nju_hwxy_long_term_chinese"],
+      "expected_program_ids": ["nju_2027_one_year_chinese"],
+      "expected_answer": "秋季学期申请时间为每年3月10日至6月25日前，额满为止。",
+      "notes": "需保留额满为止的限制。"
+    },
+    {
+      "case_id": "nju_spring_application_period",
+      "category": "policy",
+      "question": "南京大学长期汉语进修春季学期什么时候可以申请？",
+      "expected_source_ids": ["nju_hwxy_long_term_chinese"],
+      "expected_program_ids": ["nju_2027_one_year_chinese"],
+      "expected_answer": "春季学期申请时间为每年10月10日至12月25日前，额满为止。",
+      "notes": "春季和秋季时间不能混淆。"
+    },
+    {
+      "case_id": "seu_language_application_period",
+      "category": "policy",
+      "question": "东南大学语言项目秋季学期的申请时间是什么？",
+      "expected_source_ids": ["seu_cis_language_program_admission"],
+      "expected_program_ids": ["seu_2027_chinese_student_program"],
+      "expected_answer": "官网写明秋季学期为3月1日至7月30日；该页面未明确标注2027专属，招生季仍需人工确认。",
+      "notes": "答案必须保留招生季待确认标记。"
+    },
+    {
+      "case_id": "seu_language_tuition",
+      "category": "fact",
+      "question": "东南大学汉语生项目的学费是多少？",
+      "expected_source_ids": ["seu_cis_fee_standard"],
+      "expected_program_ids": ["seu_2027_chinese_student_program"],
+      "expected_answer": "非学历项目中汉语生学费为16000元人民币/学年。",
+      "notes": "收费表列汉语生16000元。"
+    },
+    {
+      "case_id": "seu_missing_requirements",
+      "category": "missing",
+      "question": "东南大学汉语语言和中国文化项目的学历要求和学制在官网上明确吗？",
+      "expected_source_ids": ["seu_cis_language_program_admission", "seu_cis_fee_standard"],
+      "expected_program_ids": ["seu_2027_chinese_student_program"],
+      "expected_answer": "现有可核验页面能确认项目名称、申请期和学费，但没有明确学历要求和学制；应标记待人工确认，不能猜测。",
+      "notes": "测试缺失信息不能被模型补全。"
+    },
+    {
+      "case_id": "njnu_one_year_pathway",
+      "category": "policy",
+      "question": "南京师范大学是否允许未达到汉语要求的申请者先学习一年汉语再进入专业？",
+      "expected_source_ids": ["njnu_2027_international_guide"],
+      "expected_program_ids": ["njnu_2027_one_year_chinese_preparatory"],
+      "expected_answer": "申请指南写明：若申请者未达到汉语水平要求，可申请学习一年汉语后进入专业学习。该表述不等于已经确认一个独立的一年制项目。",
+      "notes": "区分“预科/语言路径”和独立非学历项目。"
+    },
+    {
+      "case_id": "njnu_visiting_tuition",
+      "category": "fact",
+      "question": "南京师范大学普通进修生一年的学费是多少？",
+      "expected_source_ids": ["njnu_2027_international_guide"],
+      "expected_program_ids": ["njnu_2027_one_year_chinese_preparatory"],
+      "expected_answer": "2027申请指南列示普通进修生一学年学费为16600元人民币。",
+      "notes": "学费表列普通进修生16600元。"
+    },
+    {
+      "case_id": "njnu_application_deadline",
+      "category": "missing",
+      "question": "南京师范大学这条一年汉语学习路径的申请截止日期是什么？",
+      "expected_source_ids": ["njnu_2027_international_guide"],
+      "expected_program_ids": ["njnu_2027_one_year_chinese_preparatory"],
+      "expected_answer": "现有指南没有明确给出该路径的申请截止日期，应标记待人工确认。",
+      "notes": "不能把其他项目的时间套用到该项目。"
+    },
+    {
+      "case_id": "tuition_comparison",
+      "category": "comparison",
+      "question": "比较南京大学和东南大学当前资料中的汉语项目学费。",
+      "expected_source_ids": ["nju_hwxy_long_term_chinese", "seu_cis_fee_standard"],
+      "expected_program_ids": ["nju_2027_one_year_chinese", "seu_2027_chinese_student_program"],
+      "expected_answer": "南京大学长期汉语一学年21000元；东南大学汉语生一学年16000元。两者都是当前官网列示值，仍需确认项目范围和最终收费。",
+      "notes": "跨项目比较必须保留来源和项目差异。"
+    },
+    {
+      "case_id": "nju_eligibility",
+      "category": "policy",
+      "question": "南京大学长期汉语进修的申请资格是什么？",
+      "expected_source_ids": ["nju_hwxy_long_term_chinese"],
+      "expected_program_ids": ["nju_2027_one_year_chinese"],
+      "expected_answer": "年满18周岁、身体健康并持有有效外国护照。",
+      "notes": "答案应只依据官网申请资格段落。"
+    },
+    {
+      "case_id": "seu_english_query",
+      "category": "fact",
+      "question": "What is the autumn application deadline for Southeast University's language program?",
+      "expected_source_ids": ["seu_cis_language_program_admission"],
+      "expected_program_ids": ["seu_2027_chinese_student_program"],
+      "expected_answer": "The official page states Autumn Semester: Mar.1-Jul.30, but does not explicitly label it as a 2027-only deadline.",
+      "notes": "英文查询仍需保留招生季确认标记。"
+    }
+  ]
+}

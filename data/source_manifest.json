@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "source_id": "fdu_2027_cn_undergraduate_guide",
+      "university": "Fudan University",
+      "title": "Fudan University 2027 Undergraduate Admission Information for Chinese-taught Programs",
+      "url": "https://iso.fudan.edu.cn/_upload/article/files/21/16/d78f1dca432eb9aae4d926a26964/97a4506e-f4d8-4658-905d-f4dd204fa301.pdf",
+      "source_type": "official_pdf",
+      "language": "en",
+      "admission_cycle": "2027_entry",
+      "accessed_at": "2026-11-18",
+      "published_at": "2026-11-03",
+      "access_status": "accessible",
+      "notes": "Official 15-page admission guide. Final tuition rates are subject to the rates announced upon enrollment."
+    },
+    {
+      "source_id": "fdu_2027_cn_undergraduate_catalog",
+      "university": "Fudan University",
+      "title": "Fudan University 2027 Chinese-taught Undergraduate Programs",
+      "url": "https://iso.fudan.edu.cn/_upload/article/files/94/0a/db734e3b4af8a5f095eb13ce0771/3327b957-47a7-40d0-9da1-9ebd3497c4c2.pdf",
+      "source_type": "official_pdf",
+      "language": "en",
+      "admission_cycle": "2027_entry",
+      "accessed_at": "2026-11-18",
+      "published_at": "2026-11-03",
+      "access_status": "accessible",
+      "notes": "Official 4-page program catalog with duration, CSCA subjects and tuition. Tuition is for reference and the exact amount is announced upon enrollment."
+    },
+    {
+      "source_id": "zju_2027_undergraduate_guide",
+      "university": "Zhejiang University",
+      "title": "Application Guide for Undergraduate Programs 2027",
+      "url": "https://iczu.zju.edu.cn/admissionsen/2026/1110/c95498a3225495/page.htm",
+      "source_type": "official_webpage",
+      "language": "en",
+      "admission_cycle": "2027_entry",
+      "accessed_at": "2026-11-19",
+      "published_at": "2026-11-10",
+      "access_status": "accessible",
+      "notes": "Contains links to the Chinese-taught and English-taught catalogs. The general deadline has exceptions for certain majors."
+    },
+    {
+      "source_id": "zju_chinese_language_culture_non_degree",
+      "university": "Zhejiang University",
+      "title": "Chinese Language & Culture Programs (non-degree)",
+      "url": "https://iczu.zju.edu.cn/admissionsen/wpplicationwwuide/list.htm",
+      "source_type": "official_webpage",
+      "language": "en",
+      "admission_cycle": "2027_entry",
+      "accessed_at": "2026-11-19",
+      "published_at": null,
+      "access_status": "accessible",
+      "notes": "Covers 2027 Spring & Summer and Autumn & Winter semesters. Completion leads to a certificate of completion, not a bachelor's degree."
+    },
+    {
+      "source_id": "xmu_2027_undergraduate_guide",
+      "university": "Xiamen University",
+      "title": "2027 Admission Guide of Xiamen University for Undergraduate Programs",
+      "url": "https://admissions.xmu.edu.cn/Admissions/Undergraduate_Students.htm",
+      "source_type": "official_webpage",
+      "language": "en",
+      "admission_cycle": "2027_entry",
+      "accessed_at": "2026-11-19",
+      "published_at": null,
+      "access_status": "accessible",
+      "notes": "The English version is for reference; the Chinese version prevails if there is a discrepancy."
+    },
+    {
+      "source_id": "xmu_2027_cn_bachelor_catalog",
+      "university": "Xiamen University",
+      "title": "2027 XMU Chinese-Medium Bachelor's Programs",
+      "url": "https://admissions.xmu.edu.cn/Programs/Chinese_Medium_Bachelor_s.htm",
+      "source_type": "official_webpage",
+      "language": "en",
+      "admission_cycle": "2027_entry",
+      "accessed_at": "2026-11-19",
+      "published_at": null,
+      "access_status": "accessible",
+      "notes": "Official program catalog with campus, major, medium, duration and contact information."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+[project]
+name = "langchain-interview-prep"
+version = "0.1.0"
+description = "A LangChain and LangGraph interview coach built through small, tested learning slices."
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "chromadb>=1.5.9",
+    "langchain>=1.5.0",
+    "langchain-chroma>=1.1.0",
+    "langchain-openai>=1.8.0",
+    "langgraph>=1.2.22",
+    "pydantic>=2.14.3",
+    "pypdf>=7.1.1",
+    "requests>=2.34.2",
+]
+
+[project.optional-dependencies]
+local-embeddings = [
+    "langchain-huggingface>=1.2.3",
+    "sentence-transformers>=6.3.0",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "pytest-asyncio>=1.5.0",
+    "ruff>=0.17.5",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

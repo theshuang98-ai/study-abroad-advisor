@@ -1,0 +1,47 @@
+# Local-only learning, sessions, sources, runtime state, and temporary files
+.local/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Python environments and packaging
+.venv/
+.venv-gpu/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Test and tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+.cache/
+
+# Local agent and retrieval state
+*.db
+*.sqlite
+*.sqlite3
+.langgraph_api/
+.vectorstore/
+data/local/
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
