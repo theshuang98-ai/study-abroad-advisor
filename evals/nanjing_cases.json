@@ -109,6 +109,60 @@
       "expected_program_ids": ["seu_2027_chinese_student_program"],
       "expected_answer": "The official page states Autumn Semester: Mar.1-Jul.30, but does not explicitly label it as a 2027-only deadline.",
       "notes": "英文查询仍需保留招生季确认标记。"
+    },
+    {
+      "case_id": "nju_tuition_vi",
+      "category": "fact",
+      "question": "Học phí một năm của chương trình tiếng Trung dài hạn tại Đại học Nam Kinh là bao nhiêu?",
+      "expected_source_ids": ["nju_hwxy_long_term_chinese"],
+      "expected_program_ids": ["nju_2027_one_year_chinese"],
+      "expected_answer": "Học phí một năm là 21.000 nhân dân tệ; một học kỳ là 10.500 nhân dân tệ.",
+      "notes": "越南语查询，事实与中文题 nju_tuition 相同。"
+    },
+    {
+      "case_id": "nju_fall_application_vi",
+      "category": "policy",
+      "question": "Thời gian đăng ký học kỳ mùa thu của chương trình tiếng Trung dài hạn tại Đại học Nam Kinh là khi nào?",
+      "expected_source_ids": ["nju_hwxy_long_term_chinese"],
+      "expected_program_ids": ["nju_2027_one_year_chinese"],
+      "expected_answer": "Từ ngày 10 tháng 3 đến trước ngày 25 tháng 6 hằng năm, đến khi đủ chỉ tiêu.",
+      "notes": "越南语查询，保留“额满为止”的限制。"
+    },
+    {
+      "case_id": "seu_tuition_vi",
+      "category": "fact",
+      "question": "Học phí chương trình tiếng Trung tại Đại học Đông Nam là bao nhiêu?",
+      "expected_source_ids": ["seu_cis_fee_standard"],
+      "expected_program_ids": ["seu_2027_chinese_student_program"],
+      "expected_answer": "16.000 nhân dân tệ mỗi năm học cho sinh viên học tiếng Trung trong chương trình không cấp bằng.",
+      "notes": "越南语查询，对应收费表汉语生条目。"
+    },
+    {
+      "case_id": "njnu_one_year_pathway_vi",
+      "category": "policy",
+      "question": "Đại học Sư phạm Nam Kinh có cho phép sinh viên học một năm tiếng Trung trước khi vào chuyên ngành không?",
+      "expected_source_ids": ["njnu_2027_international_guide"],
+      "expected_program_ids": ["njnu_2027_one_year_chinese_preparatory"],
+      "expected_answer": "Có. Hướng dẫn nêu rõ người chưa đạt yêu cầu tiếng Trung có thể học một năm tiếng Trung trước khi vào chuyên ngành; đây không phải là một chương trình độc lập đã được xác nhận.",
+      "notes": "越南语查询，仍需区分语言路径与独立项目。"
+    },
+    {
+      "case_id": "tuition_comparison_vi",
+      "category": "comparison",
+      "question": "So sánh học phí chương trình tiếng Trung giữa Đại học Nam Kinh và Đại học Đông Nam theo tài liệu hiện có.",
+      "expected_source_ids": ["nju_hwxy_long_term_chinese", "seu_cis_fee_standard"],
+      "expected_program_ids": ["nju_2027_one_year_chinese", "seu_2027_chinese_student_program"],
+      "expected_answer": "Nam Kinh 21.000 nhân dân tệ/năm; Đông Nam 16.000 nhân dân tệ/năm. Cần xác nhận phạm vi chương trình và mức thu cuối cùng.",
+      "notes": "越南语查询，跨项目比较。"
+    },
+    {
+      "case_id": "nju_eligibility_vi",
+      "category": "policy",
+      "question": "Điều kiện đăng ký chương trình tiếng Trung dài hạn tại Đại học Nam Kinh là gì?",
+      "expected_source_ids": ["nju_hwxy_long_term_chinese"],
+      "expected_program_ids": ["nju_2027_one_year_chinese"],
+      "expected_answer": "Từ đủ 18 tuổi, sức khỏe tốt và có hộ chiếu nước ngoài hợp lệ.",
+      "notes": "越南语查询，事实与 nju_eligibility 相同。"
     }
   ]
 }

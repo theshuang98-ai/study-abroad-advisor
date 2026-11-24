@@ -28,6 +28,7 @@ class SearchHit:
     source_url: str
     source_quote: str
     source_type: str
+    collected_at: str = ""
 
 
 @dataclass(frozen=True, slots=True)
@@ -207,4 +208,5 @@ def _hit(metadata: Mapping[str, Any], text: str, distance: float) -> SearchHit:
         source_url=str(metadata["source_url"]),
         source_quote=str(metadata["source_quote"]),
         source_type=str(metadata["source_type"]),
+        collected_at=str(metadata.get("collected_at", "")),
     )

@@ -86,3 +86,38 @@ def test_over_budget_program_gets_flag() -> None:
     report = build_recommendation_report(intake, _load_city_pack())
 
     assert "over_budget" in report.tiers[0].items[0].flags
+
+
+def test_language_requirement_flags_come_from_catalog_fields() -> None:
+    pack = _load_city_pack()
+    program = pack.universities[0].official_programs[0]
+    program.requirements.hsk_level_required = 4
+    program.requirements.hsk_score_required = 180
+    intake = _intake()
+    intake.language.hsk_level = 3
+    intake.language.hsk_score = None
+
+    report = build_recommendation_report(intake, pack)
+
+    flags = report.tiers[0].items[0].flags
+    assert "hsk_level_below_required" in flags
+    assert "hsk_score_unknown" in flags
+
+
+def test_budget_check_is_skipped_for_non_cny_or_non_year_tuition() -> None:
+    pack = _load_city_pack()
+    pack.universities[0].official_programs[0].tuition_currency = "USD"
+
+    report = build_recommendation_report(_intake(), pack)
+
+    assert "budget_check_skipped" in report.tiers[0].items[0].flags
+
+
+def test_excluded_university_is_omitted() -> None:
+    intake = _intake()
+    intake.preferences.excluded_universities = ["Nanjing University"]
+
+    report = build_recommendation_report(intake, _load_city_pack())
+
+    universities = [item.university for tier in report.tiers for item in tier.items]
+    assert "Nanjing University" not in universities

@@ -33,5 +33,5 @@ def test_build_nanjing_eval_index_is_reproducible(tmp_path, monkeypatch) -> None
     assert "program_chunks" in report
     assert "source_chunks" in report
     assert "summary" in report
-    assert summary.total == 12
+    assert summary.total == 18
     assert summary.average_latency_ms >= 0

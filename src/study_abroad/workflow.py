@@ -40,18 +40,59 @@ def _to_evidence_ref(item) -> EvidenceRef:
     )
 
 
+def _budget_flags(program: ProgramEntry, budget: float | None) -> list[str]:
+    if budget is None or program.tuition_amount is None:
+        return []
+    if program.tuition_currency != "CNY" or program.tuition_period != "year":
+        return ["budget_check_skipped"]
+    if program.tuition_amount > budget:
+        return ["over_budget"]
+    return []
+
+
+def _language_flags(intake: StudentIntake, program: ProgramEntry) -> list[str]:
+    """Compare published language requirements with the student's declared scores."""
+    flags: list[str] = []
+    required = program.requirements
+    language = intake.language
+
+    if required.hsk_level_required is not None:
+        if language.hsk_level is None:
+            flags.append("hsk_level_unknown")
+        elif language.hsk_level < required.hsk_level_required:
+            flags.append("hsk_level_below_required")
+
+    if required.hsk_score_required is not None:
+        if language.hsk_score is None:
+            flags.append("hsk_score_unknown")
+        elif language.hsk_score < required.hsk_score_required:
+            flags.append("hsk_score_below_required")
+
+    if required.ielts_score_required is not None:
+        if language.ielts_score is None:
+            flags.append("ielts_score_unknown")
+        elif language.ielts_score < required.ielts_score_required:
+            flags.append("ielts_score_below_required")
+
+    if required.toefl_score_required is not None:
+        if language.toefl_score is None:
+            flags.append("toefl_score_unknown")
+        elif language.toefl_score < required.toefl_score_required:
+            flags.append("toefl_score_below_required")
+
+    return flags
+
+
 def _to_tier_item(
     program: ProgramEntry,
     tier_hint: str,
-    budget: float | None,
+    intake: StudentIntake,
 ) -> TierItem:
     flags: list[str] = []
-    if (
-        budget is not None
-        and program.tuition_amount is not None
-        and program.tuition_amount > budget
-    ):
-        flags.append("over_budget")
+    flags.extend(_budget_flags(program, intake.constraints.annual_budget_cny))
+    flags.extend(_language_flags(intake, program))
+    if program.admission_cycle.casefold() != intake.target_intake_cycle.casefold():
+        flags.append("admission_cycle_mismatch")
     if program.verification_status != "verified":
         flags.append(program.verification_status)
     flags.extend(program.review_flags)
@@ -102,14 +143,18 @@ def build_recommendation_report(
         raise WorkflowInputError("target_program_type does not match city_pack")
 
     grouped: dict[str, list[TierItem]] = {"reach": [], "match": [], "safety": []}
-    budget = intake.constraints.annual_budget_cny
+    excluded = {name.casefold() for name in intake.preferences.excluded_universities}
 
     for university in city_pack.universities:
+        if university.pool_status != "active":
+            continue
+        if university.university.casefold() in excluded:
+            continue
         tier_hint = university.tier_hint
         if tier_hint not in grouped:
             grouped[tier_hint] = []
         for program in university.official_programs:
-            grouped[tier_hint].append(_to_tier_item(program, tier_hint, budget))
+            grouped[tier_hint].append(_to_tier_item(program, tier_hint, intake))
 
     tiers = [
         Tier(tier_name=name, tier_label=_tier_label(name), items=items)

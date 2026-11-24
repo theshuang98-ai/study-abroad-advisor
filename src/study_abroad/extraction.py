@@ -138,7 +138,7 @@ def extract_program(
             for related in related_sources
         ],
     }
-    structured_model = model.with_structured_output(Program)
+    structured_model = model.with_structured_output(Program, method="function_calling")
     candidate = (_PROMPT | structured_model).invoke({"metadata": metadata, "text": prompt_text})
     if not isinstance(candidate, Program):
         raise ExtractionError("model did not return a Program instance")

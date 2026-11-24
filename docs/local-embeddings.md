@@ -10,6 +10,22 @@
 - 权重位置：`.local/models/bge-m3/`
 - 原始权重不进入 Git
 
+### 模型指纹（2026-11-23 下载）
+
+- Hugging Face 仓库：`BAAI/bge-m3`
+- Revision：`5617a9f61b028005a4858fdac845db406aefb181`
+- 权重文件：`pytorch_model.bin`
+- 文件大小：2,271,145,830 bytes
+- SHA256：`B5E0CE3470ABF5EF3831AA1BD5553B486803E83251590AB7FF35A117CF6AAD38`
+
+校验命令：
+
+```powershell
+(Get-FileHash .local/models/bge-m3/pytorch_model.bin -Algorithm SHA256).Hash
+```
+
+Revision 与哈希取自本机 Hugging Face 下载缓存。换模型或重新下载后必须同步更新。
+
 选择原因：
 
 - 支持中英文和多语言；
@@ -77,28 +93,16 @@ embeddings = HuggingFaceEmbeddings(
 - Chroma 索引
 - 检索评估 JSON 报告
 
-当前真实结果：
+当前真实结果（18 条查询，含 6 条越南语）：
 
 ```text
 Hit@4 = 1.0
-Complete@4 = 11/12
-平均延迟 = 33.7ms
-P95 延迟 = 59.4ms
+Complete@4 = 17/18
+平均延迟 = 57.4ms
+P95 延迟 = 102.3ms
 ```
 
 该入口已能重复构建南京 CityPack 检索索引，不再依赖临时脚本。
-
-
-
-```python
-from langchain_huggingface import HuggingFaceEmbeddings
-
-embeddings = HuggingFaceEmbeddings(
-    model_name=str(model_path),
-    model_kwargs={"device": "cuda"},
-    encode_kwargs={"normalize_embeddings": True},
-)
-```
 
 当前验证结果：
 
@@ -109,20 +113,39 @@ embedding_dimension = 1024
 model_load_seconds ≈ 77
 ```
 
+### 官网快照恢复
+
+`data/city_packs/nanjing_sources.json` 只记录元数据与快照路径，正文保存在 `.local/sources/nanjing/`，不进入 Git。
+
+恢复要求：
+
+- 逐条访问清单中的 `url`，把官网正文保存为对应 `snapshot_path`。
+- 不得用搜索结果页、转载页或其他招生季页面替代。
+- 重新采集后必须更新 `accessed_at`，并重建索引、重跑评估。
+- 恢复后校验四条快照都能加载：
+
+```powershell
+$env:PYTHONPATH = "src"
+uv run python -c "from study_abroad.source_snapshots import load_catalog_sources; print(len(load_catalog_sources('data/city_packs/nanjing_sources.json', '.')))"
+```
+
+输出应为 `4`。当前未提供自动抓取脚本。
+
 ## 4. 索引配置
 
 - 使用 cosine collection。
 - 模型改变后必须重建 collection。
 - 本次真实索引：14 个南京 chunks（3 个 Program chunks + 11 个官网 source chunks）。
-- 12 条南京评估问题：Hit@4 = 1.0，Complete@4 = 11/12，平均查询延迟 33.7ms，P95 59.4ms（口径来自 `src/study_abroad/nanjing_eval.py` 最终复现运行）。
+- 18 条南京评估问题（11 中文、1 英文、6 越南语）：Hit@4 = 1.0，Complete@4 = 17/18，平均查询延迟 57.4ms，P95 102.3ms（口径来自 `src/study_abroad/nanjing_eval.py` 最终复现运行）。
 - 唯一未完整案例为东南大学“缺失要求”问题，只召回了两个预期来源中的一个；这是多来源完整召回问题，不是模型不可用。
 - 该结果只代表 4 个来源、3 个项目的小样本，不可外推为完整南京库或生产质量。
 
 ## 5. 已知限制
 
 - 当前只验证 4 个来源、14 个 chunks，不是完整南京库质量。
-- 评估集 12 条，规模仍小，需随来源扩展继续增加到 20 条以上。
-- 仍需记录模型文件哈希或 revision。
+- 评估集 18 条，跨语言覆盖仍小，需随来源扩展继续增加。
+- 官网快照不进入 Git，新机器需先恢复快照才能重跑评估。
+- 模型文件哈希已记录，但 transformers / sentence-transformers 版本尚未固定。
 - 本地模型首次加载约 77 秒，不能把冷启动时间当成长期延迟。
 - `pytorch_model.bin` 是 pickle 格式；只能加载可信来源模型。
 

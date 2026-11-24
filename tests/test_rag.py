@@ -49,6 +49,7 @@ def test_add_and_search_returns_hit_with_source_metadata(tmp_path) -> None:
     assert hits[0].admission_cycle == "2027_entry"
     assert hits[0].source_url == chunk.source_url
     assert hits[0].source_quote == chunk.source_quote
+    assert hits[0].collected_at == "2026-11-22T00:00:00Z"
     assert isinstance(hits[0].distance, float)
 
 
