@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import shutil
+from collections.abc import Callable
 from dataclasses import asdict
 from pathlib import Path
 from typing import TYPE_CHECKING
@@ -25,6 +26,30 @@ def load_huggingface_embeddings(model_path: str | Path, device: str) -> Embeddin
         model_kwargs={"device": device},
         encode_kwargs={"normalize_embeddings": True},
     )
+
+
+def build_nanjing_retriever(
+    *,
+    model_path: str | Path,
+    persist_directory: str | Path,
+    collection_name: str = "nanjing_bge_m3_full_v1",
+    device: str = "cuda",
+    k: int = 4,
+) -> Callable[[str], list[dict]]:
+    """Open the persisted Nanjing index and expose it as a graph retriever."""
+    if not Path(persist_directory).exists():
+        raise FileNotFoundError(f"Chroma directory not found: {persist_directory}")
+    embeddings = load_huggingface_embeddings(model_path, device)
+    index = RAGIndex(
+        embeddings,
+        persist_directory=persist_directory,
+        collection_name=collection_name,
+    )
+
+    def retriever(query: str) -> list[dict]:
+        return [asdict(hit) for hit in index.search(query, k=k)]
+
+    return retriever
 
 
 def build_nanjing_eval_index(

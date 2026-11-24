@@ -28,14 +28,17 @@ def _hit() -> SearchHit:
     )
 
 
-def _model(args: dict) -> ToolCallingFakeChatModel:
-    message = AIMessage(
-        content="",
-        tool_calls=[
-            {"name": "GroundedAnswer", "args": args, "id": "call_1", "type": "tool_call"}
-        ],
-    )
-    return ToolCallingFakeChatModel(responses=[message])
+def _model(*args: dict) -> ToolCallingFakeChatModel:
+    messages = [
+        AIMessage(
+            content="",
+            tool_calls=[
+                {"name": "GroundedAnswer", "args": item, "id": "call_1", "type": "tool_call"}
+            ],
+        )
+        for item in args
+    ]
+    return ToolCallingFakeChatModel(responses=messages)
 
 
 def _answer_args(**overrides) -> dict:
@@ -69,7 +72,16 @@ def test_invented_quote_is_rejected() -> None:
     args["citations"][0]["quote"] = "RMB 99,000 per year"
 
     with pytest.raises(GroundedAnswerError, match="not supported"):
-        answer_question(_model(args), "学费是多少？", [_hit()])
+        answer_question(_model(args, args), "学费是多少？", [_hit()])
+
+
+def test_invalid_citation_is_retried_once() -> None:
+    bad = _answer_args()
+    bad["citations"][0]["quote"] = "RMB 99,000 per year"
+
+    answer = answer_question(_model(bad, _answer_args()), "学费是多少？", [_hit()])
+
+    assert answer.citations[0].quote == "RMB 21,000 per year"
 
 
 def test_no_hits_returns_refusal_without_model_call() -> None:

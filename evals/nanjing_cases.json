@@ -50,6 +50,7 @@
     {
       "case_id": "seu_missing_requirements",
       "category": "missing",
+      "expect_insufficient": true,
       "question": "东南大学汉语语言和中国文化项目的学历要求和学制在官网上明确吗？",
       "expected_source_ids": ["seu_cis_language_program_admission", "seu_cis_fee_standard"],
       "expected_program_ids": ["seu_2027_chinese_student_program"],
@@ -77,6 +78,7 @@
     {
       "case_id": "njnu_application_deadline",
       "category": "missing",
+      "expect_insufficient": true,
       "question": "南京师范大学这条一年汉语学习路径的申请截止日期是什么？",
       "expected_source_ids": ["njnu_2027_international_guide"],
       "expected_program_ids": ["njnu_2027_one_year_chinese_preparatory"],

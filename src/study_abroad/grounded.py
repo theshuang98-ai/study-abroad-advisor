@@ -40,10 +40,14 @@ _PROMPT = ChatPromptTemplate.from_messages(
         (
             "system",
             "Answer using only the numbered official evidence. Never use outside knowledge. "
-            "If the evidence does not contain the answer, set insufficient_evidence=true and "
-            "state that official sources do not confirm it. For every factual claim, add a "
-            "citation with the exact source_id, source_url, admission_cycle, accessed_at, and a "
-            "short verbatim quote copied from that evidence. Never invent fees or deadlines.",
+            "The question may be in Chinese, English, or Vietnamese; answer in the question's "
+            "language. If the evidence states the requested fact, answer it even when the wording "
+            "differs, and do not mark insufficient. Set insufficient_evidence=true only when the "
+            "evidence does not contain the requested fact; then state that official sources do not "
+            "confirm it. For every factual claim, add a citation with the exact source_id, "
+            "source_url, admission_cycle, accessed_at, and a short quote copied character-for-"
+            "character from that evidence. Never translate or paraphrase a quote. Never invent "
+            "fees or deadlines.",
         ),
         ("human", "Question:\n{question}\n\nOfficial evidence:\n{evidence}"),
     ]
@@ -107,9 +111,18 @@ def answer_question(
         )
 
     structured_model = model.with_structured_output(GroundedAnswer, method="function_calling")
-    result = (_PROMPT | structured_model).invoke(
-        {"question": question, "evidence": _evidence_block(hits)}
-    )
-    if not isinstance(result, GroundedAnswer):
-        raise GroundedAnswerError("model did not return a GroundedAnswer instance")
-    return _validate_citations(result, hits)
+    last_error: GroundedAnswerError | None = None
+    for _ in range(2):
+        result = (_PROMPT | structured_model).invoke(
+            {"question": question, "evidence": _evidence_block(hits)}
+        )
+        if not isinstance(result, GroundedAnswer):
+            last_error = GroundedAnswerError("model did not return a GroundedAnswer instance")
+            continue
+        try:
+            return _validate_citations(result, hits)
+        except GroundedAnswerError as error:
+            last_error = error
+    if last_error is None:
+        raise GroundedAnswerError("model did not produce an answer")
+    raise last_error
