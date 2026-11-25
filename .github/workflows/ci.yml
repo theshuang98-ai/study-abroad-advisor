@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.11.23"
+          python-version: "3.11"
+          enable-cache: true
+      - run: uv sync --frozen --group dev
+      - run: uv run pytest
+      - run: uv run ruff check .
