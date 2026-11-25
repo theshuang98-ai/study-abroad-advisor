@@ -128,6 +128,8 @@ docker run --rm -p 8501:8501 `
 
 容器不包含模型和 Chroma 索引，需要挂载 `.local/`。容器默认使用 CPU Embedding，首次加载明显慢于本机 GPU。
 
+当前镜像约 10.1GB，因为 PyPI 的 torch 默认带 CUDA 依赖。CPU 推理可用，但镜像体积仍需优化。
+
 ## CI
 
 `.github/workflows/ci.yml` 在 push 和 pull request 时运行：
@@ -137,6 +139,8 @@ docker run --rm -p 8501:8501 `
 - `uv run ruff check .`
 
 CI 不调用真实模型。需要本地官网快照的索引集成测试在干净 checkout 会自动跳过；其余测试使用 fake embeddings 和临时目录。
+
+首次 GitHub Actions 运行已通过，耗时约 23 秒。
 
 ## 复现南京检索评估
 
