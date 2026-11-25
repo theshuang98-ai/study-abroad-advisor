@@ -93,13 +93,13 @@ embeddings = HuggingFaceEmbeddings(
 - Chroma 索引
 - 检索评估 JSON 报告
 
-当前真实结果（18 条查询，含 6 条越南语）：
+当前真实结果（20 条查询，含 6 条越南语）：
 
 ```text
 Hit@4 = 1.0
-Complete@4 = 17/18
-平均延迟 = 57.4ms
-P95 延迟 = 102.3ms
+Complete@4 = 19/20
+平均延迟 = 63.8ms
+P95 延迟 = 67.9ms
 ```
 
 该入口已能重复构建南京 CityPack 检索索引，不再依赖临时脚本。
@@ -135,15 +135,15 @@ uv run python -c "from study_abroad.source_snapshots import load_catalog_sources
 
 - 使用 cosine collection。
 - 模型改变后必须重建 collection。
-- 本次真实索引：14 个南京 chunks（3 个 Program chunks + 11 个官网 source chunks）。
-- 18 条南京评估问题（11 中文、1 英文、6 越南语）：Hit@4 = 1.0，Complete@4 = 17/18，平均查询延迟 57.4ms，P95 102.3ms（口径来自 `src/study_abroad/nanjing_eval.py` 最终复现运行）。
+- 本次真实索引：27 个南京 chunks（5 个 Program chunks + 22 个官网 source chunks）。
+- 20 条南京评估问题（13 中文、1 英文、6 越南语）：Hit@4 = 1.0，Complete@4 = 19/20，平均查询延迟 63.8ms，P95 67.9ms（口径来自 `src/study_abroad/nanjing_eval.py` 最终复现运行）。
 - 唯一未完整案例为东南大学“缺失要求”问题，只召回了两个预期来源中的一个；这是多来源完整召回问题，不是模型不可用。
 - 该结果只代表 4 个来源、3 个项目的小样本，不可外推为完整南京库或生产质量。
 
 ## 5. 已知限制
 
-- 当前只验证 4 个来源、14 个 chunks，不是完整南京库质量。
-- 评估集 18 条，跨语言覆盖仍小，需随来源扩展继续增加。
+- 当前只验证 7 个来源、27 个 chunks，不是完整南京库质量。
+- 评估集 20 条，跨语言覆盖仍小，需随来源扩展继续增加。
 - 官网快照不进入 Git，新机器需先恢复快照才能重跑评估。
 - 模型文件哈希已记录，但 transformers / sentence-transformers 版本尚未固定。
 - 本地模型首次加载约 77 秒，不能把冷启动时间当成长期延迟。

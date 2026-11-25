@@ -165,6 +165,24 @@
       "expected_program_ids": ["nju_2027_one_year_chinese"],
       "expected_answer": "Từ đủ 18 tuổi, sức khỏe tốt và có hộ chiếu nước ngoài hợp lệ.",
       "notes": "越南语查询，事实与 nju_eligibility 相同。"
+    },
+    {
+      "case_id": "hhu_language_program",
+      "category": "policy",
+      "question": "河海大学汉语进修项目的学制、学费和 2022 年秋季申请时间是什么？",
+      "expected_source_ids": ["hhu_chinese_language_program_2022"],
+      "expected_program_ids": ["hhu_chinese_language_program"],
+      "expected_answer": "学制为一学期及以上；学费 13,200 元/年（含教材费）；2022 年秋季申请期为 5 月 1 日至 6 月 20 日。该页面为 2022 年信息，当前招生季仍需人工确认。",
+      "notes": "测试过期信息必须保留 stale 提示，不能当作 2027 数据。"
+    },
+    {
+      "case_id": "njtech_language_program",
+      "category": "fact",
+      "question": "南京工业大学语言预科项目的学制和学费是多少？",
+      "expected_source_ids": ["njtech_language_preparatory", "njtech_fee_standard"],
+      "expected_program_ids": ["njtech_language_preparatory"],
+      "expected_answer": "学制 1 年；语言预科生学费为 15,000 元/人/年。招生季未在页面明确标注，需人工确认。",
+      "notes": "多来源：项目页给学制，收费页给学费。"
     }
   ]
 }

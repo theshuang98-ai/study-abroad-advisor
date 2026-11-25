@@ -14,7 +14,7 @@ def test_nanjing_city_pack_json_loads_into_schema() -> None:
     assert pack.city_pack_id == "nanjing_pack_v1"
     assert pack.city == "Nanjing"
     assert pack.target_program_type == "one_year_chinese_program"
-    assert len(pack.universities) == 4
+    assert len(pack.universities) == 5
 
     university = pack.universities[0]
     assert university.university == "Nanjing University"
@@ -43,8 +43,12 @@ def test_nanjing_city_pack_json_loads_into_schema() -> None:
 
     hohai = pack.universities[2]
     assert hohai.university == "Hohai University"
-    assert hohai.pool_status == "pending"
-    assert hohai.official_programs == []
+    assert hohai.pool_status == "active"
+    assert len(hohai.official_programs) == 1
+    hohai_program = hohai.official_programs[0]
+    assert hohai_program.tuition_amount == 13200
+    assert hohai_program.verification_status == "stale"
+    assert len(hohai_program.evidence) == 3
     assert "needs_manual_review:current_cycle_program_page" in hohai.review_flags
 
     njnu = pack.universities[3]
@@ -53,3 +57,13 @@ def test_nanjing_city_pack_json_loads_into_schema() -> None:
     assert len(njnu.official_programs) == 1
     assert njnu.official_programs[0].tuition_amount == 16600
     assert "needs_manual_review:application_deadline" in njnu.official_programs[0].review_flags
+
+    tech = pack.universities[4]
+    assert tech.university == "Nanjing Tech University"
+    assert tech.tier_hint == "safety"
+    assert tech.pool_status == "active"
+    assert len(tech.official_programs) == 1
+    tech_program = tech.official_programs[0]
+    assert tech_program.tuition_amount == 15000
+    assert tech_program.admission_cycle == "unspecified"
+    assert len(tech_program.evidence) == 2

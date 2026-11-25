@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 import pytest
 from langchain_core.embeddings import Embeddings
 
@@ -16,6 +18,10 @@ class _FakeEmbeddings(Embeddings):
         return [float(len(text)), 0.0]
 
 
+@pytest.mark.skipif(
+    not Path(".local/sources/nanjing").is_dir(),
+    reason="Nanjing source snapshots are local-only",
+)
 def test_build_nanjing_eval_index_is_reproducible(tmp_path, monkeypatch) -> None:
     monkeypatch.setattr(
         "study_abroad.nanjing_eval.load_huggingface_embeddings",
@@ -36,7 +42,7 @@ def test_build_nanjing_eval_index_is_reproducible(tmp_path, monkeypatch) -> None
     assert "program_chunks" in report
     assert "source_chunks" in report
     assert "summary" in report
-    assert summary.total == 18
+    assert summary.total == 20
     assert summary.average_latency_ms >= 0
 
 

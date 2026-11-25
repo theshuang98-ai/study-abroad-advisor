@@ -48,7 +48,7 @@ def get_retriever():
     return build_nanjing_retriever(
         model_path=MODEL_PATH,
         persist_directory=CHROMA_PATH,
-        device="cuda",
+        device=os.environ.get("EMBEDDING_DEVICE", "cuda"),
         k=4,
     )
 
@@ -148,7 +148,7 @@ def _render_qa() -> None:
         with st.spinner("检索并生成引用回答…"):
             hits = get_retriever()(question)
             answer = answer_question(
-                load_deepseek_chat_model(max_tokens=500),
+                load_deepseek_chat_model(max_tokens=900),
                 question,
                 hits,
             )

@@ -61,10 +61,12 @@ def test_build_recommendation_report_from_city_pack() -> None:
 
     assert report.intake_id == "intake_1"
     assert report.city == "Nanjing"
-    assert [tier.tier_name for tier in report.tiers] == ["reach", "match"]
+    assert [tier.tier_name for tier in report.tiers] == ["reach", "match", "safety"]
     assert report.tiers[0].items[0].university == "Nanjing University"
     assert report.tiers[0].items[1].university == "Southeast University"
-    assert report.tiers[1].items[0].university == "Nanjing Normal University"
+    assert report.tiers[1].items[0].university == "Hohai University"
+    assert report.tiers[1].items[1].university == "Nanjing Normal University"
+    assert report.tiers[2].items[0].university == "Nanjing Tech University"
     assert "needs_manual_review:education_requirement" in report.tiers[0].items[1].flags
     assert report.missing_fields == [
         "language.hsk_level",

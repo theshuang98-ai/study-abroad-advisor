@@ -41,6 +41,36 @@
       "accessed_at": "2026-11-23",
       "access_status": "accessible",
       "snapshot_path": ".local/sources/nanjing/njnu_2027_international_guide.html"
+    },
+    {
+      "source_id": "hhu_chinese_language_program_2022",
+      "university": "Hohai University",
+      "title": "2022 Hohai University Offline Chinese Language Program",
+      "url": "https://ie.hhu.edu.cn/2021/1206/c14689a232400/pagem.htm",
+      "source_type": "official_webpage",
+      "accessed_at": "2026-11-25",
+      "access_status": "accessible",
+      "snapshot_path": ".local/sources/nanjing/hhu_chinese_language_program_2022.html"
+    },
+    {
+      "source_id": "njtech_language_preparatory",
+      "university": "Nanjing Tech University",
+      "title": "语言预科项目（进修生）",
+      "url": "https://coe.njtech.edu.cn/info/1028/1399.htm",
+      "source_type": "official_webpage",
+      "accessed_at": "2026-11-25",
+      "access_status": "accessible",
+      "snapshot_path": ".local/sources/nanjing/njtech_language_preparatory.html"
+    },
+    {
+      "source_id": "njtech_fee_standard",
+      "university": "Nanjing Tech University",
+      "title": "南京工业大学海外教育学院收费标准",
+      "url": "https://coe.njtech.edu.cn/info/1030/1401.htm",
+      "source_type": "official_webpage",
+      "accessed_at": "2026-11-25",
+      "access_status": "accessible",
+      "snapshot_path": ".local/sources/nanjing/njtech_fee_standard.html"
     }
   ]
 }

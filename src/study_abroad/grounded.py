@@ -39,6 +39,7 @@ _PROMPT = ChatPromptTemplate.from_messages(
     [
         (
             "system",
+            "You must call the GroundedAnswer tool; never answer in plain text. "
             "Answer using only the numbered official evidence. Never use outside knowledge. "
             "The question may be in Chinese, English, or Vietnamese; answer in the question's "
             "language. If the evidence states the requested fact, answer it even when the wording "

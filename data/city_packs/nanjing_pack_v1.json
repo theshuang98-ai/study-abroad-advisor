@@ -6,7 +6,7 @@
   "admission_cycle": "2027_fall",
   "version": "v1",
   "created_at": "2026-11-23T10:00:00Z",
-  "updated_at": "2026-11-23T13:00:00Z",
+  "updated_at": "2026-11-25T00:35:00Z",
   "universities": [
     {
       "university": "Nanjing University",
@@ -120,13 +120,72 @@
       "university": "Hohai University",
       "city": "Nanjing",
       "tier_hint": "match",
-      "pool_status": "pending",
+      "pool_status": "active",
       "review_flags": [
-        "needs_manual_review:current_cycle_program_page",
-        "needs_manual_review:program_requirements",
-        "needs_manual_review:tuition"
+        "needs_manual_review:current_cycle_program_page"
       ],
-      "official_programs": []
+      "official_programs": [
+        {
+          "program_id": "hhu_chinese_language_program",
+          "university": "Hohai University",
+          "city": "Nanjing",
+          "program_name": "Chinese Language Program",
+          "program_type": "one_year_chinese_program",
+          "admission_cycle": "2022_fall",
+          "instruction_language": "Chinese",
+          "duration_text": "one semester or more (1 year option)",
+          "tuition_amount": 13200,
+          "tuition_currency": "CNY",
+          "tuition_period": "year",
+          "application_deadline": "2022-06-20",
+          "requirements": {
+            "education_level_required": "high_school",
+            "chinese_level_required": null,
+            "hsk_level_required": null,
+            "hsk_score_required": null,
+            "ielts_score_required": null,
+            "toefl_score_required": null,
+            "other_requirements": [
+              "Age 16-40",
+              "Physically and mentally healthy",
+              "Fall 2022 application window: May 1 - Jun 20, 2022"
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "hhu_chinese_language_program_2022",
+              "source_url": "https://ie.hhu.edu.cn/2021/1206/c14689a232400/pagem.htm",
+              "source_title": "2022 Hohai University Offline Chinese Language Program",
+              "source_quote": "Tuition Fees: 6,600 RMB /semester, 13,200 RMB / year",
+              "admission_cycle": "2022_fall",
+              "accessed_at": "2026-11-25"
+            },
+            {
+              "source_id": "hhu_chinese_language_program_2022",
+              "source_url": "https://ie.hhu.edu.cn/2021/1206/c14689a232400/pagem.htm",
+              "source_title": "2022 Hohai University Offline Chinese Language Program",
+              "source_quote": "foreign citizens aged 16-40, with high school diploma or above",
+              "admission_cycle": "2022_fall",
+              "accessed_at": "2026-11-25"
+            },
+            {
+              "source_id": "hhu_chinese_language_program_2022",
+              "source_url": "https://ie.hhu.edu.cn/2021/1206/c14689a232400/pagem.htm",
+              "source_title": "2022 Hohai University Offline Chinese Language Program",
+              "source_quote": "Fall Semester: from May 1, 2022 to Jun 20, 2022",
+              "admission_cycle": "2022_fall",
+              "accessed_at": "2026-11-25"
+            }
+          ],
+          "verification_status": "stale",
+          "review_flags": [
+            "needs_manual_review:admission_cycle",
+            "needs_manual_review:application_deadline",
+            "needs_manual_review:tuition_2022"
+          ],
+          "last_reviewed_at": "2026-11-25T00:30:00Z"
+        }
+      ]
     },
     {
       "university": "Nanjing Normal University",
@@ -179,6 +238,68 @@
             "needs_manual_review:tuition_table_quote"
           ],
           "last_reviewed_at": "2026-11-23T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "university": "Nanjing Tech University",
+      "city": "Nanjing",
+      "tier_hint": "safety",
+      "pool_status": "active",
+      "review_flags": [
+        "needs_manual_review:admission_cycle",
+        "needs_manual_review:application_deadline"
+      ],
+      "official_programs": [
+        {
+          "program_id": "njtech_language_preparatory",
+          "university": "Nanjing Tech University",
+          "city": "Nanjing",
+          "program_name": "Language Preparatory Program",
+          "program_type": "one_year_chinese_program",
+          "admission_cycle": "unspecified",
+          "instruction_language": "Chinese",
+          "duration_text": "1 year",
+          "tuition_amount": 15000,
+          "tuition_currency": "CNY",
+          "tuition_period": "year",
+          "application_deadline": null,
+          "requirements": {
+            "education_level_required": null,
+            "chinese_level_required": null,
+            "hsk_level_required": null,
+            "hsk_score_required": null,
+            "ielts_score_required": null,
+            "toefl_score_required": null,
+            "other_requirements": [
+              "Chinese language and culture preparatory coursework"
+            ]
+          },
+          "evidence": [
+            {
+              "source_id": "njtech_language_preparatory",
+              "source_url": "https://coe.njtech.edu.cn/info/1028/1399.htm",
+              "source_title": "语言预科项目（进修生）",
+              "source_quote": "1年学制",
+              "admission_cycle": "unspecified",
+              "accessed_at": "2026-11-25"
+            },
+            {
+              "source_id": "njtech_fee_standard",
+              "source_url": "https://coe.njtech.edu.cn/info/1030/1401.htm",
+              "source_title": "南京工业大学海外教育学院收费标准",
+              "source_quote": "语言预科生 15000 元 / 人 / 年",
+              "admission_cycle": "unspecified",
+              "accessed_at": "2026-11-25"
+            }
+          ],
+          "verification_status": "partial",
+          "review_flags": [
+            "needs_manual_review:admission_cycle",
+            "needs_manual_review:application_deadline",
+            "needs_manual_review:education_requirement"
+          ],
+          "last_reviewed_at": "2026-11-25T00:35:00Z"
         }
       ]
     }

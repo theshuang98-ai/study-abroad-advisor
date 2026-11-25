@@ -10,46 +10,46 @@
 
 - 官网 HTML/PDF 解析，保留标题与来源快照。
 - LangChain Structured Output 抽取 Program/Evidence，配合确定性校验。
-- 南京 CityPack：3 所 active、1 所 pending（河海大学）。
+- 南京 CityPack：5 所 active；河海大学项目数据标记为 stale。
 - 本地 BGE-M3 + Chroma cosine 检索，支持大学 Metadata 过滤。
-- 18 条南京检索评估（含 6 条越南语），可复现入口 `src/study_abroad/nanjing_eval.py`。
+- 20 条南京检索评估（含 6 条越南语），可复现入口 `src/study_abroad/nanjing_eval.py`。
 - 确定性推荐表生成：按学校档次分组，预算超限、语言成绩不足、招生季不符等确定性标记。
 - LangGraph 最小工作流：缺字段澄清、检索节点（可注入真实 Chroma）、证据检查、人工确认、SQLite Checkpoint 恢复。
-- DeepSeek 引用回答：只用检索证据作答，引用必须命中 chunk 原文；无证据时明确拒答；18 条回答评估见下。
+- DeepSeek 引用回答：只用检索证据作答，引用必须命中 chunk 原文；无证据时明确拒答；20 条回答评估见下。
 - Streamlit 工作台：学生表单 → 推荐表 → 人工确认 → 带引用问答。
 - 116 项自动化测试，Ruff 通过。
 
 ## 检索实测
 
 ```text
-样本：4 个官网来源，14 个 chunks（3 Program + 11 Source）
-查询：18 条（中文 11、英文 1、越南语 6）
+样本：7 个官网来源，27 个 chunks（5 Program + 22 Source）
+查询：20 条（中文 13、英文 1、越南语 6）
 Hit@4        = 1.0
-Complete@4   = 17/18
-平均延迟     = 57.4ms
-P95 延迟     = 102.3ms
+Complete@4   = 19/20
+平均延迟     = 63.8ms
+P95 延迟     = 67.9ms
 ```
 
 6 条越南语查询全部 Hit@4 且 Complete@4。唯一未完整案例仍是东南大学“学历要求与学制”问题：需要两个来源，Top-4 只召回一个。
 
-延迟是单机单次运行结果，受 GPU 状态影响；18 条混合语言查询与早期 12 条中文基线不可直接比较。
+延迟是单机单次运行结果，受 GPU 状态影响；20 条混合语言查询与早期 12 条中文基线不可直接比较。
 
 该结果只代表当前小样本，不能外推为完整南京库或生产质量。
 
 ## 回答实测
 
-使用 DeepSeek 对同一批 18 条问题生成带引用回答，结构或引用无效时最多重试一次：
+使用 DeepSeek 对同一批 20 条问题生成带引用回答，结构或引用无效时最多重试一次：
 
 ```text
-Citation Hit        = 18/18
-Citation Complete   = 17/18
-Refusal Correct     = 2/2
+Citation Hit        = 20/20
+Citation Complete   = 19/20
+Refusal Correct     = 19/20
 Errors              = 0
-平均生成延迟        = 2.20s
-P95 生成延迟        = 3.76s
+平均生成延迟        = 2.49s
+P95 生成延迟        = 4.06s
 ```
 
-唯一引用不完整仍是东南大学“学历要求与学制”案例：模型正确拒答，但只引用收费页，未同时引用招生页。拒答样本只有 2 条，不能代表完整可靠性。
+未完整案例：东南大学“学历要求与学制”正确拒答，但只引用收费页。另有 1 条越南语秋季申请题被误判证据不足。拒答样本只有 2 条，不能代表完整可靠性。
 
 ## 架构
 
@@ -115,6 +115,29 @@ $env:PYTHONPATH = "src"
 
 流程：填写学生背景 → 生成推荐表 → 审核或退回 → 基于官网证据提问。
 
+## Docker
+
+```powershell
+docker build -t study-abroad-advisor .
+docker run --rm -p 8501:8501 `
+  -e DEEPSEEK_API_KEY="<key>" `
+  -e EMBEDDING_DEVICE=cpu `
+  -v "${PWD}/.local:/app/.local" `
+  study-abroad-advisor
+```
+
+容器不包含模型和 Chroma 索引，需要挂载 `.local/`。容器默认使用 CPU Embedding，首次加载明显慢于本机 GPU。
+
+## CI
+
+`.github/workflows/ci.yml` 在 push 和 pull request 时运行：
+
+- `uv sync --frozen --group dev`
+- `uv run pytest`
+- `uv run ruff check .`
+
+CI 不调用真实模型。需要本地官网快照的索引集成测试在干净 checkout 会自动跳过；其余测试使用 fake embeddings 和临时目录。
+
 ## 复现南京检索评估
 
 前置条件：
@@ -155,5 +178,5 @@ $env:PYTHONPATH = "src"
 - LangGraph 检索节点已支持注入真实 Chroma（本地 BGE-M3 已验证）；报告文案仍是确定性模板。
 - DeepSeek 已接入结构化抽取与引用回答，但尚未驱动报告文案。
 - 推荐表已做预算与 HSK/雅思/托福的确定性匹配；学历要求仍是自由文本，需人工复核。
-- 只有 4 个南京来源、3 个 active 项目，样本不足以支撑完整城市推荐。
-- Docker、CI 尚未完成；Streamlit 仅本地 Demo，未做登录与并发。
+- 7 个南京来源、5 个 active 项目；河海为 2022 stale 数据，南京工业大学招生季未标注。
+- Docker 与 CI 配置已加入；容器使用 CPU Embedding，未做登录与并发。

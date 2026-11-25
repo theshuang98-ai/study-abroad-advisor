@@ -16,8 +16,8 @@ def _pack() -> CityPack:
 def test_city_pack_produces_one_fact_chunk_per_active_program() -> None:
     chunks = chunks_from_city_pack(_pack())
 
-    assert len(chunks) == 3
-    assert len({chunk.chunk_id for chunk in chunks}) == 3
+    assert len(chunks) == 5
+    assert len({chunk.chunk_id for chunk in chunks}) == 5
     assert all(chunk.source_quote for chunk in chunks)
     assert all(chunk.program_id for chunk in chunks)
     assert all(chunk.source_type == "program_fact" for chunk in chunks)
@@ -36,6 +36,8 @@ def test_city_chunks_include_fees_deadlines_and_review_flags() -> None:
         "Review flags: needs_manual_review:application_deadline"
         in by_program["njnu_2027_one_year_chinese_preparatory"].text
     )
+    assert "Tuition: 15000 CNY per year" in by_program["njtech_language_preparatory"].text
+    assert "Tuition: 13200 CNY per year" in by_program["hhu_chinese_language_program"].text
 
 
 def test_city_chunks_keep_source_trace() -> None:
