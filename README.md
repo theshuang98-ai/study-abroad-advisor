@@ -16,7 +16,8 @@
 - 确定性推荐表生成：按学校档次分组，预算超限、语言成绩不足、招生季不符等确定性标记。
 - LangGraph 最小工作流：缺字段澄清、检索节点（可注入真实 Chroma）、证据检查、人工确认、SQLite Checkpoint 恢复。
 - DeepSeek 引用回答：只用检索证据作答，引用必须命中 chunk 原文；无证据时明确拒答；18 条回答评估见下。
-- 113 项自动化测试，Ruff 通过。
+- Streamlit 工作台：学生表单 → 推荐表 → 人工确认 → 带引用问答。
+- 116 项自动化测试，Ruff 通过。
 
 ## 检索实测
 
@@ -65,7 +66,7 @@ P95 生成延迟        = 3.76s
   -> LangGraph 工作流（澄清 / 证据检查 / 人工确认 / SQLite）
   -> 确定性推荐表
   -> 引用回答（DeepSeek，证据不足时拒答）
-  -> [规划中] Streamlit 演示
+  -> Streamlit 演示
 ```
 
 ## 目录
@@ -100,6 +101,19 @@ $env:DEEPSEEK_API_KEY = "<your-key>"
 ```
 
 可选变量：`DEEPSEEK_BASE_URL`（默认 `https://api.deepseek.com`）、`DEEPSEEK_MODEL`（默认 `deepseek-chat`）。
+
+## Streamlit 演示
+
+页面依赖本地 BGE-M3 与 Chroma 索引，使用 `.venv-gpu` 启动：
+
+```powershell
+$env:PYTHONPATH = "src"
+.\.venv-gpu\Scripts\python.exe -m streamlit run src/study_abroad/app.py
+```
+
+页面会自动读取项目根目录 `.env`，不覆盖已有环境变量。首次检索会加载 BGE-M3，约 77 秒。
+
+流程：填写学生背景 → 生成推荐表 → 审核或退回 → 基于官网证据提问。
 
 ## 复现南京检索评估
 
@@ -142,4 +156,4 @@ $env:PYTHONPATH = "src"
 - DeepSeek 已接入结构化抽取与引用回答，但尚未驱动报告文案。
 - 推荐表已做预算与 HSK/雅思/托福的确定性匹配；学历要求仍是自由文本，需人工复核。
 - 只有 4 个南京来源、3 个 active 项目，样本不足以支撑完整城市推荐。
-- Streamlit、Docker、CI 尚未完成。
+- Docker、CI 尚未完成；Streamlit 仅本地 Demo，未做登录与并发。
